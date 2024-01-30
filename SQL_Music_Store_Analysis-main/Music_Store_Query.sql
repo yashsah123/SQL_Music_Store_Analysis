@@ -1,4 +1,4 @@
-/*	Question Set 1 - Easy */
+/*	Question Set 1  */
 
 /* Q1: Who is the senior most employee based on job title? */
 
@@ -47,9 +47,9 @@ LIMIT 1;
 
 
 
-/* Question Set 2 - Moderate */
+/* Question Set 2 - */
 
-/* Q1: Write query to return the email, first name, last name, & Genre of all Rock Music listeners. 
+/* Q1: Write a query to return the email, first name, last name, & Genre of all Rock Music listeners. 
 Return your list ordered alphabetically by email starting with A. */
 
 /*Method 1 */
@@ -107,12 +107,12 @@ ORDER BY miliseconds DESC;
 
 /* Question Set 3 - Advance */
 
-/* Q1: Find how much amount spent by each customer on artists? Write a query to return customer name, artist name and total spent */
+/* Q1: Find how much amount spent by each customer on artists. Write a query to return the customer name, artist name, and total spent */
 
 /* Steps to Solve: First, find which artist has earned the most according to the InvoiceLines. Now use this artist to find 
 which customer spent the most on this artist. For this query, you will need to use the Invoice, InvoiceLine, Track, Customer, 
 Album, and Artist tables. Note, this one is tricky because the Total spent in the Invoice table might not be on a single product, 
-so you need to use the InvoiceLine table to find out how many of each product was purchased, and then multiply this by the price
+so you need to use the InvoiceLine table to find out how many of each product were purchased, and then multiply this by the price
 for each artist. */
 
 WITH best_selling_artist AS (
@@ -223,8 +223,5 @@ JOIN country_max_spending ms
 ON cc.billing_country = ms.billing_country
 WHERE cc.total_spending = ms.max_spending
 ORDER BY 1;
-
-
-/* source: www.youtube.com/@RishabhMishraOfficial */
 
 /* Thank You :) */
